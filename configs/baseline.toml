@@ -1,0 +1,61 @@
+# MacroCanvas — baseline calibration.
+# All quantities are quarterly unless stated otherwise.
+# Inflation and interest rates are expressed in annual percentage points (pp).
+
+[simulation]
+seed = 20261020
+periods = 144
+burn_in = 60
+start_period = "1990Q1"
+
+[estimation]
+hac_lags = 4
+var_lags = 1
+bootstrap_reps = 300
+projection_paths = 1500
+projection_horizon = 12
+projection_seed = 314159
+
+[parameters]
+# --- IS curve ---------------------------------------------------------------
+output_gap_persistence = 0.68
+real_rate_sensitivity = 0.20
+fiscal_impulse_effect = 0.18
+external_demand_effect = 0.12
+financial_stress_effect = 0.12
+neutral_real_rate = 0.75
+sigma_output_gap = 0.45
+
+# --- Phillips curve ---------------------------------------------------------
+inflation_persistence = 0.58
+inflation_target = 2.0
+output_gap_inflation = 0.25
+oil_pass_through = 0.015
+expectation_weight_on_target = 0.35
+sigma_inflation = 0.60
+
+# --- Okun's law -------------------------------------------------------------
+natural_unemployment = 5.4
+okun_coefficient = 0.42
+unemployment_residual_persistence = 0.50
+sigma_unemployment = 0.15
+
+# --- Monetary policy --------------------------------------------------------
+policy_inertia = 0.78
+inflation_response = 1.45
+output_gap_response = 0.55
+effective_lower_bound = 0.25
+sigma_policy = 0.18
+
+# --- Exogenous processes ----------------------------------------------------
+external_demand_persistence = 0.82
+sigma_external_demand = 0.90
+fiscal_impulse_persistence = 0.55
+sigma_fiscal_impulse = 0.45
+oil_persistence = 0.65
+sigma_oil = 4.50
+financial_stress_persistence = 0.82
+sigma_financial_stress = 0.20
+potential_growth_mean = 1.80
+potential_growth_persistence = 0.70
+sigma_potential_growth = 0.25

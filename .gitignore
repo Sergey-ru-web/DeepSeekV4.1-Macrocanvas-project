@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+
+# Operating systems and editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Generated artefacts are reproducible from the CLI.
+# Keep the folder placeholders, ignore their contents.
+data/raw/*.csv
+data/processed/*.csv
+reports/figures/*.png
+reports/tables/*.csv
+reports/*.json
+reports/*.md
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!reports/figures/.gitkeep
+!reports/tables/.gitkeep
